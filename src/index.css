@@ -1,13 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #444;
+    color: white;
+    margin: 20px;
+    font: 32px;
+    font-family: outfit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.square {
+    background-color: #444;
+    color: white;
+    border: 1px solid #999;
+    padding: 0;
+    font-size: 84px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+
+.square:focus {
+    outline: none;
+    background-color: #222;
+}
+
+.status {
+    margin: 20px;
+    font-size: 24px;
+}
+
+.reset-btn {
+  margin-top: 16px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 16px 0 24px;
+  padding: 12px 24px;
+
+  background: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* INDIVIDUAL SCORE */
+.scoreboard span {
+  padding: 8px 16px;
+  border-radius: 8px;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* X PLAYER STYLE */
+.scoreboard span:first-child {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+/* O PLAYER STYLE */
+.scoreboard span:last-child {
+  background-color: #fce4ec;
+  color: #ad1457;
 }
